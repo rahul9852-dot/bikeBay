@@ -5,10 +5,14 @@ import {
  StyleSheet,
  View,
  TouchableOpacity,
+ Dimensions,
  Text,
+ ImageBackground,
 } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import PhoneInput from "react-native-phone-number-input";
+
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window')
 
 const PhoneNumber = ({ navigation }) => {
  const [value, setValue] = useState("");
@@ -18,6 +22,7 @@ const PhoneNumber = ({ navigation }) => {
  return (
    <>
      <View style={styles.container}>
+          
        <SafeAreaView style={styles.wrapper}>
          <View style={styles.welcome}>
            <Text>Welcome!</Text>
@@ -57,8 +62,10 @@ const PhoneNumber = ({ navigation }) => {
 const styles = StyleSheet.create({
  container: {
    flex: 1,
-   backgroundColor: Colors.lighter,
+   backgroundColor: Colors.blue, 
+   backgroundImage: "url(/image/mechanic.png)"
  },
+
 
  wrapper: {
    flex: 1,
