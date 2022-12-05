@@ -45,7 +45,6 @@ const PhoneNumber = ({ navigation }) => {
          <TouchableOpacity
            style={styles.button}
            onPress={() => {
-             // TODO - send SMS!
              sendSmsVerification(formattedValue).then((sent) => {
                 navigation.navigate("Otp", { phoneNumber: formattedValue });
               });              
